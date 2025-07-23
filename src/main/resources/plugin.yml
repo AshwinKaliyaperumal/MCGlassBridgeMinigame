@@ -1,0 +1,10 @@
+name: GlassBridgeMinigame
+version: 1.0.0
+main: me.icewarrior127.glassbridgeminigame.GlassBridgeMinigame
+description: The glass bridge minigame from SquidGames
+author: PaperMC
+website: https://papermc.io
+api-version: '1.21.4'
+commands:
+  pasteglassbridge:
+    description: Pastes the glass bridge schematic
