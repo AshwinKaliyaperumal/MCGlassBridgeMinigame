@@ -6,5 +6,7 @@ author: PaperMC
 website: https://papermc.io
 api-version: '1.21.4'
 commands:
-  pasteglassbridge:
-    description: Pastes the glass bridge schematic
+  startbridge:
+    description: Starts the glass bridge at your current location
+    usage: /startbridge
+    permission: glassbridge.start
