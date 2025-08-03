@@ -25,11 +25,10 @@ public class GlassBridgeManager {
     private final Map<SchematicRegion, Boolean> regionSafetyMap = new HashMap<>(); // region -> isSafe=false
     private final List<Location[]> panePairs = new ArrayList<>();
 
-    private static final int SCHEMATIC_SIZE = 3;
-    private static final int SCHEMATIC_SPACING = 3;
+    private static final int SCHEMATIC_SIZE = 3; // BASED OF THE glass_pane.schem DON'T CHANGE
+    private static final int SCHEMATIC_SPACING = 2; // adjust the distance between panes
     private static final int TOTAL_OFFSET = SCHEMATIC_SIZE + SCHEMATIC_SPACING;
     private static final int MANUAL_SHIFT = 3; // i think i saved the schematic weirdly so this adjusts for that
-
 
     public GlassBridgeManager(JavaPlugin plugin) {
         this.plugin = plugin;
@@ -58,9 +57,9 @@ public class GlassBridgeManager {
                 pasteSchematic(clipboard, left);
                 pasteSchematic(clipboard, right);
 
-                // manual shifting
-                left.add(3, 0, 2);
-                right.add(3, 0, 2);
+                // manual shifting otherwise the Schematic regions don't fit the pasted in-game schematic
+                left.add(MANUAL_SHIFT - 5, 0, MANUAL_SHIFT - 2);
+                right.add(MANUAL_SHIFT - 5, 0, MANUAL_SHIFT - 2);
 
                 SchematicRegion leftRegion = new SchematicRegion(left, width, height, length);
                 SchematicRegion rightRegion = new SchematicRegion(right, width, height, length);

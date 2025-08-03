@@ -10,7 +10,6 @@ public class GlassBridgeMinigame extends JavaPlugin {
     private GlassBridgeManager bridgeManager;
     private final static int BRIDGE_SIZE = 10;
 
-
     @Override
     public void onEnable() {
         this.bridgeManager = new GlassBridgeManager(this);
