@@ -26,6 +26,6 @@ test {
 
 jar {
     archiveBaseName.set('GlassBridgeMinigame') // or any plugin name you want
-    archiveVersion.set('1.0')
+    archiveVersion.set('2.0')
 }
 

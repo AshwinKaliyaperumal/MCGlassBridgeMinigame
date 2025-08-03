@@ -26,7 +26,7 @@ public class PlayerStepListener implements Listener {
         Location below = to.clone().subtract(0, 1, 0);
         Material blockType = below.getBlock().getType();
 
-        if (below.getBlock().getType() == Material.RED_STAINED_GLASS && bridgeManager.isNonSafe(below)) {
+        if (below.getBlock().getType() == Material.WHITE_STAINED_GLASS && bridgeManager.isNonSafe(below)) {
             bridgeManager.breakSchematicAt(below);
             player.sendMessage("You stepped on a non-safe pane! It broke!");
             Bukkit.getLogger().info(player.getName() + " stepped on a non-safe pane!");
